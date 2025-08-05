@@ -25,16 +25,24 @@
   -webkit-animation: wheel 2s infinite;
 }
 
+.font-tinos {
+  font-family: "Tinos", serif;
+}
+
+.font-karla {
+  font-family: "Karla", sans-serif;
+}
+
 @keyframes wheel {
-    to {
-      opacity: 0;
-      top: 40px;
-    }
+  to {
+    opacity: 0;
+    top: 40px;
   }
-  
-  @-webkit-keyframes wheel {
-    to {
-      opacity: 0;
-      top: 40px;
-    }
+}
+
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 40px;
   }
+}

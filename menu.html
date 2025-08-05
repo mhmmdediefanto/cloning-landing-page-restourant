@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/output.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900">
+    <!-- navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style="background: transparent"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo Section -->
+          <div class="flex flex-col">
+            <span class="text-white text-sm">Nexgen Jepara</span>
+            <div class="text-white text-2xl font-bold">
+              <span>nex</span>
+              <span
+                class="inline-block w-6 h-6 bg-pink-500 rounded-full relative"
+              >
+                <span class="absolute top-0 right-0 w-1 h-1 bg-pink-500"></span>
+              </span>
+              <span>gen</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex space-x-8">
+            <a
+              href="/index.html"
+              class="text-white hover:text-gray-300 transition-colors relative"
+            >
+              Home
+              <span
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-white"
+              ></span>
+            </a>
+            <a
+              href="/menu.html"
+              class="text-white hover:text-gray-300 transition-colors"
+              >Menu</a
+            >
+            <a
+              href="/about.html"
+              class="text-white hover:text-gray-300 transition-colors"
+              >About</a
+            >
+            <a
+              href="/contact.html"
+              class="text-white hover:text-gray-300 transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Desktop Right Section -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <!-- Phone Button -->
+            <a
+              href="https://wa.me/628981511002"
+              class="bg-yellow-400 text-black px-4 py-2 rounded font-medium hover:bg-yellow-300 transition-colors"
+            >
+              (62) 898-1511-002
+            </a>
+            <!-- Social Icons -->
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Off-Canvas Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden hidden"
+    >
+      <div
+        class="fixed top-0 right-0 h-full w-80 bg-green-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <div class="flex flex-col h-full">
+          <!-- Close Button -->
+          <div class="flex justify-end p-6">
+            <button id="close-menu-btn" class="text-white text-2xl">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Restaurant Logo -->
+          <div class="flex flex-col items-center mb-8">
+            <div
+              class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-utensils text-green-800 text-2xl"></i>
+            </div>
+            <h2 class="text-white text-2xl font-bold">Restaurant</h2>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="flex flex-col items-center space-y-6 mb-8">
+            <a
+              href="/index.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >Home</a
+            >
+            <a
+              href="/menu.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >Menu</a
+            >
+            <a
+              href="/about.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >About</a
+            >
+            <a
+              href="/contact.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex justify-center space-x-6 mb-8">
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+          </div>
+
+          <!-- Phone Button -->
+          <div class="flex justify-center">
+            <a
+              href="https://wa.me/628981511002"
+              class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors"
+            >
+              (62) 898-1511-002
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[120vh]">
+      <!-- Background Image -->
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2070&q=80"
+        alt="Restaurant Background"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black opacity-75"></div>
+
+      <!-- Hero Content -->
+      <div
+        class="container mx-auto px-4 py-16 relative z-10 flex items-center min-h-screen"
+      >
+        <div class="text-center w-full">
+          <h1 class="text-white text-5xl md:text-7xl font-serif mb-6">Menu</h1>
+          <p class="text-white text-lg max-w-2xl mx-auto font-karla">
+            Nikmati berbagai pilihan menu istimewa yang kami sajikan dengan
+            bahan-bahan segar dan berkualitas. Mulai dari hidangan pembuka,
+            makanan utama, hingga penutup yang menggoda selera. Setiap sajian
+            diracik dengan penuh cinta dan cita rasa autentik.
+          </p>
+        </div>
+      </div>
+      <!-- Mouse effect di tengah antara hero text dan kotak hijau -->
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 z-10"
+        style="top: 75%"
+      >
+        <div class="flex items-center justify-center">
+          <div class="mouse" id="mouse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section book menu -->
+    <section
+      class="container mx-auto bg-gray-900 text-white py-16 px-4 md:px-12"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 gap-10 items-center justify-center"
+      >
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">
+              One Thousand Flavors In One Place
+            </h2>
+            <p class="text-gray-300 leading-relaxed mb-8 font-karla">
+              Silakan hubungi kami untuk memesan meja atau reservasi. Kami siap
+              melayani Anda dengan penuh semangat.
+            </p>
+          </div>
+          <div class="flex justify-end">
+            <div>
+              <a
+                href="#"
+                class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black py-3 px-6 rounded transition"
+              >
+                Book a Table
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div
+            class="bg-gray-800 flex lg:flex-nowrap items-center p-5 lg:p-10 flex-wrap gap-5 hover:bg-gray-700 transition-all duration-300"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-coffee-icon lucide-coffee"
+              >
+                <path d="M10 2v2" />
+                <path d="M14 2v2" />
+                <path
+                  d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+                />
+                <path d="M6 2v2" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl mb-1 lg:text-2xl font-serif font-bold">
+                Hot Drink
+              </h1>
+              <p class="text-gray-300 font-karla">
+                Choose your favorite category mauris orci dignissim nisl
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-gray-800 flex lg:flex-nowrap items-center p-5 lg:p-10 flex-wrap gap-5 hover:bg-gray-700 transition-all duration-300"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-coffee-icon lucide-coffee"
+              >
+                <path d="M10 2v2" />
+                <path d="M14 2v2" />
+                <path
+                  d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+                />
+                <path d="M6 2v2" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl mb-1 lg:text-2xl font-serif font-bold">
+                Hot Drink
+              </h1>
+              <p class="text-gray-300 font-karla">
+                Choose your favorite category mauris orci dignissim nisl
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-gray-800 flex lg:flex-nowrap items-center p-5 lg:p-10 flex-wrap gap-5 hover:bg-gray-700 transition-all duration-300"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-coffee-icon lucide-coffee"
+              >
+                <path d="M10 2v2" />
+                <path d="M14 2v2" />
+                <path
+                  d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+                />
+                <path d="M6 2v2" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl mb-1 lg:text-2xl font-serif font-bold">
+                Hot Drink
+              </h1>
+              <p class="text-gray-300 font-karla">
+                Choose your favorite category mauris orci dignissim nisl
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-gray-800 flex lg:flex-nowrap items-center p-5 lg:p-10 flex-wrap gap-5 hover:bg-gray-700 transition-all duration-300"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-coffee-icon lucide-coffee"
+              >
+                <path d="M10 2v2" />
+                <path d="M14 2v2" />
+                <path
+                  d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+                />
+                <path d="M6 2v2" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl mb-1 lg:text-2xl font-serif font-bold">
+                Hot Drink
+              </h1>
+              <p class="text-gray-300 font-karla">
+                Choose your favorite category mauris orci dignissim nisl
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-gray-800 flex lg:flex-nowrap items-center p-5 lg:p-10 flex-wrap gap-5 hover:bg-gray-700 transition-all duration-300"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-coffee-icon lucide-coffee"
+              >
+                <path d="M10 2v2" />
+                <path d="M14 2v2" />
+                <path
+                  d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+                />
+                <path d="M6 2v2" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl mb-1 lg:text-2xl font-serif font-bold">
+                Hot Drink
+              </h1>
+              <p class="text-gray-300 font-karla">
+                Choose your favorite category mauris orci dignissim nisl
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-gray-800 flex lg:flex-nowrap items-center p-5 lg:p-10 flex-wrap gap-5 hover:bg-gray-700 transition-all duration-300"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-coffee-icon lucide-coffee"
+              >
+                <path d="M10 2v2" />
+                <path d="M14 2v2" />
+                <path
+                  d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+                />
+                <path d="M6 2v2" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl mb-1 lg:text-2xl font-serif font-bold">
+                Hot Drink
+              </h1>
+              <p class="text-gray-300 font-karla">
+                Choose your favorite category mauris orci dignissim nisl
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section starter menu -->
+    <section class="max-w-7xl mx-auto py-10">
+      <div
+        class="relative w-full h-[500px] md:min-h-screen bg-black overflow-hidden"
+      >
+        <!-- Background Image -->
+        <img
+          src="./assets/starter_menu.jpg"
+          alt="Starter Menu"
+          class="w-full h-full object-cover object-center opacity-50"
+        />
+        <!-- Overlay Content -->
+        <div
+          class="absolute inset-0 flex flex-col justify-center md:justify-between px-6 md:px-16 py-10 text-white"
+        >
+          <!-- Teks Kiri -->
+          <div class="max-w-lg bottom-0">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 font-serif">
+              Starters
+            </h2>
+            <p
+              class="text-white/80 text-base md:text-lg leading-relaxed font-karla"
+            >
+              Pilih makanan pembuka favoritmu yang dibuat dengan bahan segar dan
+              rasa terbaik. Cocok untuk memulai hidanganmu dengan sempurna.
+            </p>
+          </div>
+
+          <!-- Harga Kanan Bawah -->
+          <div
+            class="absolute bottom-8 right-8 flex flex-col items-end text-right"
+          >
+            <span class="text-white text-sm md:text-base mb-1 font-karla"
+              >Mulai dari</span
+            >
+            <div
+              class="bg-yellow-400 text-black font-bold text-xl md:text-2xl w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full shadow-lg"
+            >
+              <span class="text-center font-karla">Rp 25K</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-900 text-white mt-20 px-4 md:px-12"
+      >
+        <!-- Menu Item -->
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Salmon fillet
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$10</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 border-2 my-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Beaf burger
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$6</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 my-2 border-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Salmon fillet
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$10</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 border-2 my-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Beaf burger
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$6</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 my-2 border-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Salmon fillet
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$10</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 border-2 my-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Beaf burger
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$6</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 my-2 border-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Salmon fillet
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$10</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 border-2 my-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-bold font-serif lg:text-3xl">
+              Beaf burger
+            </h3>
+            <span class="text-yellow-400 font-bold font-serif lg:text-2xl"
+              >$6</span
+            >
+          </div>
+          <div
+            class="border-b border-dashed border-gray-500 my-2 border-2"
+          ></div>
+          <p class="text-sm text-gray-400">
+            Maecenas interdum lorem eleifend orci aliquam mollis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gray-950 text-white pt-16 pb-8">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Logo dan Deskripsi -->
+        <div class="text-center mb-10">
+          <img
+            src="/src/assets/logo.png"
+            alt="Logo"
+            class="mx-auto h-10 mb-4"
+          />
+          <p class="text-gray-400 max-w-xl mx-auto">
+            Duis pretium gravida enim, vel maximus ligula fermentum a. Sed
+            rhoncus eget ex id egestas. Nam nec nisl placerat, tempus erat a,
+            condimentum metusurabitur.
+          </p>
+        </div>
+
+        <!-- Informasi Footer -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-300"
+        >
+          <!-- Jam Operasional -->
+          <div>
+            <h4 class="font-semibold mb-2">Opening Hours</h4>
+            <p>Mon - Sun / 12 am - 12pm</p>
+          </div>
+
+          <!-- Kontak -->
+          <div>
+            <h4 class="font-semibold mb-2">Contact</h4>
+            <p>Phone: (+62) 898-1511-002</p>
+            <p>Email: info@nexgen.id</p>
+          </div>
+
+          <!-- Alamat -->
+          <div>
+            <h4 class="font-semibold mb-2">Address</h4>
+            <p>
+              Jl. H. Ali Syarif No.RT04, Rw. 06,<br />
+              Tahunan, Jepara, Kabupaten Jepara,<br />
+              Jawa Tengah 59421
+            </p>
+          </div>
+
+          <!-- Info Tambahan -->
+          <div>
+            <h4 class="font-semibold mb-2">Info</h4>
+            <p>Nam nec nisl placerat tempus erat</p>
+            <p>Condimentum metusurabitur</p>
+          </div>
+        </div>
+
+        <!-- Garis dan Copyright -->
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm"
+        >
+          Copyright © 2025 - Created by Nexgen
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+      <div class="relative group">
+        <div
+          class="absolute right-full mr-2 bottom-0 bg-white text-black px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap"
+        >
+          Need Help?
+        </div>
+        <a
+          href="https://wa.me/628981511002"
+          class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+        >
+          <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const closeMenuBtn = document.getElementById("close-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuContent = mobileMenu.querySelector("div");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+        setTimeout(() => {
+          mobileMenuContent.classList.remove("translate-x-full");
+        }, 10);
+      });
+
+      closeMenuBtn.addEventListener("click", () => {
+        mobileMenuContent.classList.add("translate-x-full");
+        setTimeout(() => {
+          mobileMenu.classList.add("hidden");
+        }, 300);
+      });
+
+      // Close menu when clicking outside
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) {
+          closeMenuBtn.click();
+        }
+      });
+
+      // Check if background image loads
+      const heroImage = document.querySelector(
+        'img[alt="Restaurant Background"]'
+      );
+      if (heroImage) {
+        heroImage.addEventListener("error", function () {
+          console.error("Background image failed to load");
+          // Hide the image and add gradient background
+          this.style.display = "none";
+          document.querySelector(".relative.min-h-screen").style.background =
+            "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+        });
+
+        heroImage.addEventListener("load", function () {
+          console.log("Background image loaded successfully");
+          console.log("Image src:", this.src);
+          console.log(
+            "Image natural dimensions:",
+            this.naturalWidth,
+            "x",
+            this.naturalHeight
+          );
+        });
+      }
+
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          // Keep navbar transparent but add blur effect to content behind
+          navbar.style.background = "transparent";
+          navbar.style.backdropFilter = "blur(10px)";
+          navbar.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+        } else {
+          // Remove all effects when at top
+          navbar.style.background = "transparent";
+          navbar.style.backdropFilter = "none";
+          navbar.style.boxShadow = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

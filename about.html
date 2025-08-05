@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/output.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900">
+    <!-- navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style="background: transparent"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo Section -->
+          <div class="flex flex-col">
+            <span class="text-white text-sm">Nexgen Jepara</span>
+            <div class="text-white text-2xl font-bold">
+              <span>nex</span>
+              <span
+                class="inline-block w-6 h-6 bg-pink-500 rounded-full relative"
+              >
+                <span class="absolute top-0 right-0 w-1 h-1 bg-pink-500"></span>
+              </span>
+              <span>gen</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex space-x-8">
+            <a
+              href="/index.html"
+              class="text-white hover:text-gray-300 transition-colors relative"
+            >
+              Home
+              <span
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-white"
+              ></span>
+            </a>
+            <a
+              href="/menu.html"
+              class="text-white hover:text-gray-300 transition-colors"
+              >Menu</a
+            >
+            <a
+              href="/about.html"
+              class="text-white hover:text-gray-300 transition-colors"
+              >About</a
+            >
+            <a
+              href="/contact.html"
+              class="text-white hover:text-gray-300 transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Desktop Right Section -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <!-- Phone Button -->
+            <a
+              href="https://wa.me/628981511002"
+              class="bg-yellow-400 text-black px-4 py-2 rounded font-medium hover:bg-yellow-300 transition-colors"
+            >
+              (62) 898-1511-002
+            </a>
+            <!-- Social Icons -->
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Off-Canvas Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden hidden"
+    >
+      <div
+        class="fixed top-0 right-0 h-full w-80 bg-green-800 transform translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <div class="flex flex-col h-full">
+          <!-- Close Button -->
+          <div class="flex justify-end p-6">
+            <button id="close-menu-btn" class="text-white text-2xl">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Restaurant Logo -->
+          <div class="flex flex-col items-center mb-8">
+            <div
+              class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-utensils text-green-800 text-2xl"></i>
+            </div>
+            <h2 class="text-white text-2xl font-bold">Restaurant</h2>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="flex flex-col items-center space-y-6 mb-8">
+            <a
+              href="/index.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >Home</a
+            >
+            <a
+              href="/menu.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >Menu</a
+            >
+            <a
+              href="/about.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >About</a
+            >
+            <a
+              href="/contact.html"
+              class="text-white text-lg hover:text-gray-300 transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex justify-center space-x-6 mb-8">
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+          </div>
+
+          <!-- Phone Button -->
+          <div class="flex justify-center">
+            <a
+              href="https://wa.me/628981511002"
+              class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors"
+            >
+              (62) 898-1511-002
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[120vh]">
+      <!-- Background Image -->
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2070&q=80"
+        alt="Restaurant Background"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black opacity-75"></div>
+
+      <!-- Hero Content -->
+      <div
+        class="container mx-auto px-4 py-16 relative z-10 flex items-center min-h-screen"
+      >
+        <div class="text-center w-full">
+          <h1 class="text-white text-5xl md:text-7xl font-serif mb-6">
+            Tentang Kami
+          </h1>
+          <p class="text-white text-sm lg:text-lg max-w-2xl mx-auto font-karla">
+            Kami adalah restoran yang menyediakan berbagai hidangan lezat dan
+            berkualitas tinggi. Dengan pengalaman lebih dari 10 tahun dalam
+            industri restoran, kami memiliki komitmen untuk memberikan
+            pengalaman makan yang tak terlupakan bagi setiap pelanggan kami.
+          </p>
+        </div>
+      </div>
+      <!-- Mouse effect di tengah antara hero text dan kotak hijau -->
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 z-10"
+        style="top: 75%"
+      >
+        <div class="flex items-center justify-center">
+          <div class="mouse" id="mouse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section our chef -->
+    <section class="bg-gray-900 text-white py-16 px-4 md:px-12">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10"
+      >
+        <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer">
+          <!-- Gambar Chef -->
+          <div class="flex justify-center">
+            <img
+              src="./assets/chef_botak.png"
+              alt="Our Chef"
+              class="max-w-full md:max-w-sm lg:max-w-md hover:scale-105 transition-all duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Konten Teks -->
+        <div class="mt-10">
+          <div class="flex items-center mb-6 justify-center">
+            <div class="bg-yellow-400 text-black p-3 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2l4 -4m5 2a9 9 0 11-18 0a9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-4 font-serif text-center"
+          >
+            Our Chef
+          </h2>
+          <p class="mb-4 text-gray-300 leading-relaxed font-karla">
+            Aenean sed lorem est. Sed quis neque ut nibh suscipit imperdiet ac
+            non augue. Aenean ornare sit amet lectus non tristique. Nunc ut
+            volutpat lectus. Nulla velit augue, pulvinar sed nisi sit amet,
+            eleifend fermentum est.
+          </p>
+          <p class="mb-6 text-gray-300 leading-relaxed font-karla">
+            Quisque nibh justo, congue ut erat at, aliquet efficitur purus.
+            Integer venenatis odio vitae orci efficitur mollis. Donec ultrices
+            diam dictum dignissim vestibulum. Proin eleifend nunc nunc. Sed non
+            arcu eget lorem viverra sodales.
+          </p>
+          <h3 class="text-2xl italic font-signature">Jeremy Ellot</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- section kotak rating -->
+    <section class="bg-gray-900 text-white py-16 px-4 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div
+          class="flex flex-col items-center justify-center bg-gray-600 gap-5 rounded-sm p-10"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chef-hat-icon lucide-chef-hat text-yellow-500"
+            >
+              <path
+                d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"
+              />
+              <path d="M6 17h12" />
+            </svg>
+          </div>
+          <div class="text-6xl font-bold text-yellow-500 font-karla">10</div>
+          <div class="text-gray-300 text-center">
+            <p class="font-serif text-lg">Profesional Chef</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center bg-gray-600 gap-5 rounded-sm p-10"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-salad-icon lucide-salad text-yellow-500"
+            >
+              <path d="M7 21h10" />
+              <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
+              <path
+                d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"
+              />
+              <path d="m13 12 4-4" />
+              <path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2" />
+            </svg>
+          </div>
+          <div class="text-6xl font-bold text-yellow-500 font-karla">10</div>
+          <div class="text-gray-300 text-center">
+            <p class="font-serif text-lg">Excellent Dishes</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center bg-gray-600 gap-5 rounded-sm p-10"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chef-hat-icon lucide-chef-hat text-yellow-500"
+            >
+              <path
+                d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"
+              />
+              <path d="M6 17h12" />
+            </svg>
+          </div>
+          <div class="text-6xl font-bold text-yellow-500 font-karla">10</div>
+          <div class="text-gray-300 text-center">
+            <p class="font-serif text-lg">Profesional Chef</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center bg-gray-600 gap-5 rounded-sm p-10"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-salad-icon lucide-salad text-yellow-500"
+            >
+              <path d="M7 21h10" />
+              <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
+              <path
+                d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"
+              />
+              <path d="m13 12 4-4" />
+              <path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2" />
+            </svg>
+          </div>
+          <div class="text-6xl font-bold text-yellow-500 font-karla">10</div>
+          <div class="text-gray-300 text-center">
+            <p class="font-serif text-lg">Excellent Dishes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section excellence testimonial -->
+    <section class="bg-gray-900 text-white py-16 px-4 md:px-12">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10"
+      >
+        <!-- Teks -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">
+            Exelent taste and the<br class="hidden md:block" />
+            best quality
+          </h2>
+          <p class="text-gray-300 leading-relaxed mb-8 font-karla">
+            Etiam dui ipsum, viverra vel turpis ut, dignissim elementum mauris.
+            Sed dapibus auctor scelerisque. Aenean at leo tellus. Morbi eu leo
+            sapien. Fusce libero dolor, venenatis eget enim sed, commodo
+            efficitur.
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black py-3 px-6 transition"
+          >
+            More Details
+          </a>
+        </div>
+
+        <!-- Gambar + Tombol Play -->
+        <div
+          class="relative flex justify-center overflow-hidden w-full lg:h-[500px]"
+        >
+          <img
+            src="./assets/food.jpg"
+            alt="Cooking"
+            class="rounded-sm shadow-sm object-cover object-center w-full"
+          />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <button
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-black p-4 rounded-full shadow-lg hover:scale-105 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6.5 5.5a1 1 0 011.5-.87l6 3.5a1 1 0 010 1.74l-6 3.5A1 1 0 016.5 12.5v-7z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="bg-gray-950 text-white py-16 px-4 md:px-12">
+      <div class="container mx-auto items-center gap-10">
+        <div>
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-6 font-serif text-center py-10"
+          >
+            Meet Our Team
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div class="flex flex-col items-center justify-center">
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer">
+              <!-- Gambar Chef -->
+              <div class="flex justify-center">
+                <img
+                  src="./assets/chef_botak.png"
+                  alt="Our Chef"
+                  class="w-full h-full object-cover object-center hover:scale-105 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <!-- nama chef -->
+              <h3 class="text-2xl font-bold font-serif">Jeremy Ellot</h3>
+              <!-- jabatan chef -->
+              <p class="text-gray-300 font-karla">Chef</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer">
+              <!-- Gambar Chef -->
+              <div class="flex justify-center">
+                <img
+                  src="./assets/chef_botak.png"
+                  alt="Our Chef"
+                  class="w-full h-full object-cover object-center hover:scale-105 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <!-- nama chef -->
+              <h3 class="text-2xl font-bold font-serif">Jeremy Ellot</h3>
+              <!-- jabatan chef -->
+              <p class="text-gray-300 font-karla">Chef</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer">
+              <!-- Gambar Chef -->
+              <div class="flex justify-center">
+                <img
+                  src="./assets/chef_botak.png"
+                  alt="Our Chef"
+                  class="w-full h-full object-cover object-center hover:scale-105 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <!-- nama chef -->
+              <h3 class="text-2xl font-bold font-serif">Jeremy Ellot</h3>
+              <!-- jabatan chef -->
+              <p class="text-gray-300 font-karla">Chef</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer">
+              <!-- Gambar Chef -->
+              <div class="flex justify-center">
+                <img
+                  src="./assets/chef_botak.png"
+                  alt="Our Chef"
+                  class="w-full h-full object-cover object-center hover:scale-105 transition-all duration-300"
+                />
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <!-- nama chef -->
+              <h3 class="text-2xl font-bold font-serif">Jeremy Ellot</h3>
+              <!-- jabatan chef -->
+              <p class="text-gray-300 font-karla">Chef</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section dignis -->
+    <section class="bg-gray-900 text-white py-16 px-4 md:px-12">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center"
+      >
+        <!-- Kolom Kiri: Teks -->
+        <div class="">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">
+            Phasellus Dignissim <br class="hidden md:block" />
+            Tellus Euismod
+          </h2>
+          <p class="text-gray-300 leading-relaxed mb-8 font-karla">
+            Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed
+            pretium sem libero, vel pellentesque purus ultrices ut. In quis leo
+            id massa pulvinar euismod cursus non justo. Sed sagittis et urna non
+            efficitur. Nulla nec lacus tincidunt.
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black py-3 px-6 rounded transition"
+          >
+            Book a Table
+          </a>
+        </div>
+
+        <!-- Kolom Kanan: Grid Gambar -->
+        <div class="grid grid-cols-2 gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1613145991370-e7c7c14e6e0d"
+            alt="Food 1"
+            class="rounded-lg w-full h-auto object-cover"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7"
+            alt="View"
+            class="rounded-lg w-full h-auto object-cover"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+            alt="Food 2"
+            class="rounded-lg w-full h-auto object-cover col-span-2"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gray-950 text-white pt-16 pb-8">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Logo dan Deskripsi -->
+        <div class="text-center mb-10">
+          <img
+            src="/src/assets/logo.png"
+            alt="Logo"
+            class="mx-auto h-10 mb-4"
+          />
+          <p class="text-gray-400 max-w-xl mx-auto">
+            Duis pretium gravida enim, vel maximus ligula fermentum a. Sed
+            rhoncus eget ex id egestas. Nam nec nisl placerat, tempus erat a,
+            condimentum metusurabitur.
+          </p>
+        </div>
+
+        <!-- Informasi Footer -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-300"
+        >
+          <!-- Jam Operasional -->
+          <div>
+            <h4 class="font-semibold mb-2">Opening Hours</h4>
+            <p>Mon - Sun / 12 am - 12pm</p>
+          </div>
+
+          <!-- Kontak -->
+          <div>
+            <h4 class="font-semibold mb-2">Contact</h4>
+            <p>Phone: (+62) 898-1511-002</p>
+            <p>Email: info@nexgen.id</p>
+          </div>
+
+          <!-- Alamat -->
+          <div>
+            <h4 class="font-semibold mb-2">Address</h4>
+            <p>
+              Jl. H. Ali Syarif No.RT04, Rw. 06,<br />
+              Tahunan, Jepara, Kabupaten Jepara,<br />
+              Jawa Tengah 59421
+            </p>
+          </div>
+
+          <!-- Info Tambahan -->
+          <div>
+            <h4 class="font-semibold mb-2">Info</h4>
+            <p>Nam nec nisl placerat tempus erat</p>
+            <p>Condimentum metusurabitur</p>
+          </div>
+        </div>
+
+        <!-- Garis dan Copyright -->
+        <div
+          class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm"
+        >
+          Copyright © 2025 - Created by Nexgen
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+      <div class="relative group">
+        <div
+          class="absolute right-full mr-2 bottom-0 bg-white text-black px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap"
+        >
+          Need Help?
+        </div>
+        <a
+          href="https://wa.me/628981511002"
+          class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+        >
+          <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const closeMenuBtn = document.getElementById("close-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuContent = mobileMenu.querySelector("div");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+        setTimeout(() => {
+          mobileMenuContent.classList.remove("translate-x-full");
+        }, 10);
+      });
+
+      closeMenuBtn.addEventListener("click", () => {
+        mobileMenuContent.classList.add("translate-x-full");
+        setTimeout(() => {
+          mobileMenu.classList.add("hidden");
+        }, 300);
+      });
+
+      // Close menu when clicking outside
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) {
+          closeMenuBtn.click();
+        }
+      });
+
+      // Check if background image loads
+      const heroImage = document.querySelector(
+        'img[alt="Restaurant Background"]'
+      );
+      if (heroImage) {
+        heroImage.addEventListener("error", function () {
+          console.error("Background image failed to load");
+          // Hide the image and add gradient background
+          this.style.display = "none";
+          document.querySelector(".relative.min-h-screen").style.background =
+            "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+        });
+
+        heroImage.addEventListener("load", function () {
+          console.log("Background image loaded successfully");
+          console.log("Image src:", this.src);
+          console.log(
+            "Image natural dimensions:",
+            this.naturalWidth,
+            "x",
+            this.naturalHeight
+          );
+        });
+      }
+
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          // Keep navbar transparent but add blur effect to content behind
+          navbar.style.background = "transparent";
+          navbar.style.backdropFilter = "blur(10px)";
+          navbar.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+        } else {
+          // Remove all effects when at top
+          navbar.style.background = "transparent";
+          navbar.style.backdropFilter = "none";
+          navbar.style.boxShadow = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
